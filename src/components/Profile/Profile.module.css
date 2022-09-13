@@ -1,0 +1,14 @@
+/* .profile {
+   background-color: aquamarine 
+} */
+
+.name {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: larger;
+   color: blueviolet;
+}
+
+.avatar {
+   width: 200px;
+   height: 200px;
+}
