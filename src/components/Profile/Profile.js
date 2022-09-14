@@ -1,32 +1,42 @@
-import css from './Profile.module.css';
 import PropTypes from 'prop-types';
+import {
+  DivProfile,
+  DivDescription,
+  ListStats,
+  UserName,
+  UserAvatar,
+  TextDescription,
+  ItemStats,
+  TextStats,
+  TextQuantity,
+} from './Profile.styled';
 
 export function Profile(props) {
   const { username, tag, location, avatar, followers, views, likes } = props;
   return (
-    <div className={css.profile}>
-      <div className="description">
-        <img src={avatar} alt="User avatar" className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <DivProfile>
+      <DivDescription>
+        <UserAvatar src={avatar} alt="User avatar" />
+        <UserName>{username}</UserName>
+        <TextDescription>@{tag}</TextDescription>
+        <TextDescription>{location}</TextDescription>
+      </DivDescription>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <ListStats>
+        <ItemStats>
+          <TextStats>Followers</TextStats>
+          <TextQuantity>{followers}</TextQuantity>
+        </ItemStats>
+        <ItemStats>
+          <TextStats>Views</TextStats>
+          <TextQuantity>{views}</TextQuantity>
+        </ItemStats>
+        <ItemStats>
+          <TextStats>Likes</TextStats>
+          <TextQuantity>{likes}</TextQuantity>
+        </ItemStats>
+      </ListStats>
+    </DivProfile>
   );
 }
 
