@@ -1,10 +1,10 @@
-export function setBgColor(props) {
-  switch (props.isOnline) {
+export function setBgColor({ isOnline, theme }) {
+  switch (isOnline) {
     case true:
-      return 'rgba(37, 158, 37, 0.621)';
+      return theme.colors.green;
     case false:
-      return 'rgba(165, 39, 39, 0.748);';
+      return theme.colors.red;
     default:
-      return 'white';
+      return theme.colors.white;
   }
 }
