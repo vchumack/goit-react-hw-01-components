@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const DivProfile = styled.div`
-  margin-top: ${props => props.theme.spacing(12)};
+  /* margin-top: ${props => props.theme.spacing(12)}; */
   margin-bottom: ${props => props.theme.spacing(12)};
   padding-top: ${props => props.theme.spacing(12)};
   margin-right: auto;

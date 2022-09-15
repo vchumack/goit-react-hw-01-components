@@ -1,5 +1,7 @@
 export const theme = Object.freeze({
   colors: {
+    primaryBg: 'rgba(85, 217, 217, 0.41)',
+    secondaryBg: '#30b2f364',
     white: '#ffffff',
     black: '#010101',
     grey: 'grey',
@@ -10,6 +12,8 @@ export const theme = Object.freeze({
     purple: '#e2d6ed',
     turquoise: '#00bcd5',
   },
+
+  space: [0, 2, 4, 8, 16, 32, 64],
 
   spacing: value => `${4 * value}px`,
 
